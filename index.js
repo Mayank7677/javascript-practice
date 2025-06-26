@@ -208,5 +208,134 @@
 
 // ---------------------------------------------------------------------
 
+// Implement a function that throttles another function (HOF + Closures).
 
+// const throatFunction = (fnc) => {
+//   let lastCall = 0;
 
+//   return () => {
+//     let current = Date.now();
+//     if (current - lastCall >= 3000) {
+//       fnc();
+//       lastCall = current;
+//     }
+//   };
+// };
+
+// let callBack = () => console.log("hello World");
+// let x = throatFunction(callBack);
+// x();
+// x();
+// x();
+
+// ---------------------------------------------------------------------
+
+// let a = true;
+// a++;
+// console.log(a);       // => 2
+
+// let a = false
+// a++;
+// console.log(a);       // => 1
+
+// ---------------------------------------------------------------------
+
+// remove duplicate =>
+
+// let arr = [1, 2, 3, 2, 3, 5, 3, 6, 5, 6, 7];
+// let newArr = [...new Set(arr)];
+// console.log(newArr);
+
+// let newArr = [];
+// arr.forEach((num) => {
+//   if (!newArr.includes(num)) newArr.push(num);
+// });
+// console.log(newArr);
+
+// ---------------------------------------------------------------------
+
+// let arr = [1, 1, 2, 2, 2, 3, 3, 3, 4, 3, 5, 6, 4, 6, 7, 6, 7, 45, 45];
+// let obj = {};
+// arr.forEach((num) => (obj[num] === undefined ? (obj[num] = 1) : obj[num]++));
+// console.log(obj);
+
+// let maxCount = 0;
+// let mostFreq = null;
+
+// for (x in obj) {
+//   if (obj[x] > maxCount) {
+//     maxCount = obj[x];
+//     mostFreq = x;
+//   }
+// }
+
+// console.log(`${mostFreq} appears maximum ${maxCount} times in array`);
+
+// ---------------------------------------------------------------------
+
+// Implement your own version of `.map()` as a higher-order function. =>
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let double = (num) => num * 2;
+
+// let mapKiCopy = (arr, fnc) => {
+//     let newArr = [];
+//     arr.forEach(element => {
+//         newArr.push( fnc(element) )
+//     });
+//     return newArr;
+// }
+
+// let res = mapKiCopy(arr, double)
+// console.log(res)
+
+// ---------------------------------------------------------------------
+
+// let counter = () => {
+//   let count = 0;
+
+//   return {
+//     increment: () => {
+//       count++;
+//       console.log(count);
+//     },
+//     decrement: () => {
+//       count--;
+//       console.log(count);
+//     },
+//     reset: () => {
+//       count = 0;
+//       console.log(count);
+//     },
+//   };
+// };
+
+// let useCounter = counter();
+// useCounter.increment();
+// useCounter.increment();
+// useCounter.increment();
+// useCounter.decrement();
+// useCounter.reset();
+// useCounter.increment();
+
+// ---------------------------------------------------------------------
+
+// let limitFnc = (fnc, time) => {
+//   let count = 0;
+
+//   return () => {
+//     if (count < time) {
+//       fnc();
+//       count++;
+//     } else {
+//       console.error("limit reached , purchase subscription to continue");
+//     }
+//   };
+// };
+
+// let x = limitFnc(() => console.log("Hello"), 2);
+// x();
+// x();
+// x();
+
+// ---------------------------------------------------------------------
