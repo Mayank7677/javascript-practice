@@ -339,3 +339,150 @@
 // x();
 
 // ---------------------------------------------------------------------
+
+// Hello World => olleH dlroW
+
+let reverseEachWord = (str) => {
+  // console.log(str);
+  let res = "";
+  let word = "";
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      word += str[i];
+    } else {
+      for (let j = word.length - 1; j >= 0; j--) {
+        res += word[j];
+      }
+
+      res += " ";
+      word = "";
+    }
+  }
+  // console.log(word);
+  for (let j = word.length - 1; j >= 0; j--) {
+    res += word[j];
+  }
+
+  return res;
+};
+
+// console.log(reverseEachWord("Hello World"));
+
+// Hello World => olleH dlroW
+// let reverseWordOrder = (str) => {
+//   let res = "";
+//   let word = "";
+
+//   for (let i = 0; i <= str.length - 1; i++) {
+//     if (str[i] !== " ") {
+//       word = str[i] + word;
+//     } else {
+//       if (word.length > 0) {
+//         res += word + " ";
+//         word = "";
+//       }
+//     }
+//   }
+
+//   // Append the last word (first in the original string)
+//   if (word.length > 0) {
+//     res += word;
+//   }
+
+//   return res;
+// };
+
+// console.log(reverseWordOrder("Hello World"));
+
+// ---------------------------------------------------------------------
+
+// let rvsStr = (str) => {
+//   let res = "";
+//   let word = "";
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== " ") {
+//       word = str[i] + word;
+//     } else {
+//       if (word.length > 0) {
+//         res += word + " ";
+//         word = "";
+//       }
+//     }
+//   }
+
+//   if (word.length > 0) {
+//     res += word;
+//   }
+
+//   return res;
+// };
+// console.log(rvsStr("Hello World"));  // olleH dlroW
+
+// ---------------------------------------------------------------------
+
+// const rvsStr = (str) => {
+//   let res = "";
+//   let word = "";
+
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     if (str[i] !== " ") {
+//       word += str[i];
+//     } else {
+//       if (word.length > 0) {
+//         res += word + " ";
+//         word = "";
+//       }
+//     }
+//   }
+
+//   if (word.length > 0) {
+//     res += word;
+//   }
+
+//   return res;
+// };
+// console.log(rvsStr("Hello World"));  // dlroW olleH
+
+// ---------------------------------------------------------------------
+
+// let rvsStr = (str) => {
+//   let res = "";
+//   let word = "";
+
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     if (str[i] !== " ") {
+//       word = str[i] + word;
+//     } else {
+//       if (word.length > 0) {
+//         res += word + " ";
+//         word = "";
+//       }
+//     }
+//   }
+
+//   if (word.length > 0) {
+//     res += word;
+//   }
+
+//   return res;
+// };
+
+// console.log(rvsStr("Hello World")); // World Hello
+
+// ---------------------------------------------------------------------
+
+// if ([] == true) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+
+// // false
+
+// console.log(0 / 0);
+// console.log(2 / 0);
+// console.log(2 / "4");
+// console.log('h' / 2);
+// console.log([] == []);
