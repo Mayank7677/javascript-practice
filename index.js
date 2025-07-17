@@ -342,30 +342,30 @@
 
 // Hello World => olleH dlroW
 
-let reverseEachWord = (str) => {
-  // console.log(str);
-  let res = "";
-  let word = "";
+// let reverseEachWord = (str) => {
+//   // console.log(str);
+//   let res = "";
+//   let word = "";
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] !== " ") {
-      word += str[i];
-    } else {
-      for (let j = word.length - 1; j >= 0; j--) {
-        res += word[j];
-      }
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== " ") {
+//       word += str[i];
+//     } else {
+//       for (let j = word.length - 1; j >= 0; j--) {
+//         res += word[j];
+//       }
 
-      res += " ";
-      word = "";
-    }
-  }
-  // console.log(word);
-  for (let j = word.length - 1; j >= 0; j--) {
-    res += word[j];
-  }
+//       res += " ";
+//       word = "";
+//     }
+//   }
+//   // console.log(word);
+//   for (let j = word.length - 1; j >= 0; j--) {
+//     res += word[j];
+//   }
 
-  return res;
-};
+//   return res;
+// };
 
 // console.log(reverseEachWord("Hello World"));
 
@@ -478,11 +478,29 @@ let reverseEachWord = (str) => {
 // } else {
 //   console.log("false");
 // }
-
 // // false
 
 // console.log(0 / 0);
 // console.log(2 / 0);
-// console.log(2 / "4");
-// console.log('h' / 2);
-// console.log([] == []);
+// console.log("4" / 2);
+// console.log("h" / 2);
+// console.log([] === []);
+// console.log( b);
+// console.log(typeof b);
+
+
+// ---------------------------------------------------------------------
+
+// const [count, setCount] = useState(0);
+
+// const handleClick = () => {
+//   setCount((prev) => prev + 1);
+//   setCount((prev) => prev + 1);
+//   console.log(count); // still prints old value
+// };
+
+// React batches state updates for performance reasons.During one render, count is 0.
+// When you call setCount(count + 1) twice in the same function (without await, etc.),
+// React does not immediately update count between those two lines.
+
+// ---------------------------------------------------------------------
